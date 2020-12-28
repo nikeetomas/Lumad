@@ -21,7 +21,7 @@
 	$run = mail($to,$email_subject,$email_body,$headers);
 
     if($run)
-	 	echo "<script>alert('Form Submitted!');location <a href='index.html';</script>";
+	 	echo "<script>alert('Form Submitted!');location <a href='home.html';</script>";
 
 
 
