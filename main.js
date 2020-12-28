@@ -1,8 +1,3 @@
-/*
-	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 (function($) {
 
@@ -22,10 +17,7 @@
 			xxsmall:   [null,       '360px'    ]
 		});
 
-	/**
-	 * Applies parallax scrolling to an element's background image.
-	 * @return {jQuery} jQuery object.
-	 */
+	
 	$.fn._parallax = (browser.name == 'ie' || browser.name == 'edge' || browser.mobile) ? function() { return $(this) } : function(intensity) {
 
 		var	$window = $(window),
@@ -91,32 +83,31 @@
 
 	};
 
-	// Play initial animations on page load.
 		$window.on('load', function() {
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
 			}, 100);
 		});
 
-	// Clear transitioning state on unload/hide.
+	
 		$window.on('unload pagehide', function() {
 			window.setTimeout(function() {
 				$('.is-transitioning').removeClass('is-transitioning');
 			}, 250);
 		});
 
-	// Fix: Enable IE-only tweaks.
+	
 		if (browser.name == 'ie' || browser.name == 'edge')
 			$body.addClass('is-ie');
 
-	// Scrolly.
+	
 		$('.scrolly').scrolly({
 			offset: function() {
 				return $header.height() - 2;
 			}
 		});
 
-	// Tiles.
+	
 		var $tiles = $('.tiles > article');
 
 		$tiles.each(function() {
